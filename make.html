@@ -1,0 +1,243 @@
+  <!DOCTYPE html>
+  <html lang="ja" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>ナナシス履歴書メーカー - 履歴書作成</title>
+      <link href="style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+      <div class="all-box">
+        <header>
+          <div class="head-container">
+            <h1><a href="./index.html">ナナシス履歴書メーカー</a></h1>
+          </div>
+        </header>
+        <main>
+            <div class="flex-container">
+              <div class="flex-box flex-1">
+                <div class="wrap">
+                  <section class="sec-1">
+                    <label for="" class="sec-name" id="sec-name-1">1. 背景設定</label>
+                    <dl id="content-1">
+                      <dt>■背景画像</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <label>画像</label>
+                            <label class="fil-blk"><input type="file" id="select-bg-img" name="bg-img">ファイルを選択</label>
+                          </li>
+                        </ul>
+                        <div class="img-wrap">
+                          <img id="bg-img">
+                        </div>
+                      </dd>
+                      <dt>■背景色</dt>
+                      <dd>
+                        <ul>
+                          <li><label>色</label>
+                            <div class="color-blk">
+                              <input type="color" id="filter-color" value="#000000">
+                            </div>
+                          </li>
+                          <li>
+                            <label>透過度</label>
+                            <div class="range-blk">
+                              <input type="range" id="filter-alpha" value="100" step="1" max="100" min="0">
+                            </div>
+                            <span id="range_value_1" class="par">100%</span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </dl>
+                  </section>
+                  <section class="sec-2">
+                    <label for="" class="sec-name" id="sec-name-2">2. 入力欄設定</label>
+                    <dl id="content-2">
+                      <dt>■履歴書タイトル背景・入力欄枠</dt>
+                      <dd>
+                        <ul>
+                          <li><label>色</label><div class="color-blk"><input type="color" id="card-color" value="#48f2ff"></div></li>
+                          <li>
+                            <label>透過度</label>
+                            <div class="range-blk">
+                              <input type="range" id="card-alpha" value="30" step="1" max="100" min="0">
+                            </div>
+                            <span id="range_value_2" class="par">30%</span>
+                        </li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="card-value-color" value="#ffffff"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■入力欄背景</dt>
+                      <dd>
+                        <ul>
+                          <li><label>色</label><div class="color-blk"><input type="color" id="card-bg-color" value="#ffffff"></div></li>
+                          <li>
+                            <label>透過度</label>
+                            <div class="range-blk">
+                              <input type="range" id="card-bg-alpha" value="40" step="1" max="100" min="0">
+                            </div>
+                            <span id="range_value_3" class="par">40%</span>
+                        </ul>
+                      </dd>
+                    </dl>
+                  </section>
+                  <section class="sec-3">
+                    <label for="" class="sec-name" id="sec-name-3">3. 内容入力</label>
+                    <dl id="content-3">
+                      <dt>■アイコン</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <label>画像</label>
+                            <label class="fil-blk"><input type="file" id="select-icon-img" name="icon-img">ファイルを選択</label>
+                          </li>
+                        </ul>
+                        <div class="img-wrap">
+                          <img id="icon-img">
+                        </div>
+                      </dd>
+                      <dt>■プレイヤー名</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="name-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="name-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■プレイヤーID</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="id-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="id-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■プレイヤーLv.</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="number" id="lv-value" min="1" step="1"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="lv-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■総合i-n-g Lv.</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="inglv-value" min="1" step="1"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="inglv-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■総合レート</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="number" id="rate-value" min="0"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="rate-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■ナナシスを知ったきっかけ</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="know-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="know-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■好きなキャラ・ユニット</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="like-cu1-value"></div></li>
+                          <li><label>文字色1</label><div class="color-blk"><input type="color" id="like-cu1-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="like-cu2-value"></div>
+                          </li>
+                          <li><label>文字色2</label><div class="color-blk"><input type="color" id="like-cu2-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容3</label><div class="text-blk"><input type="text" id="like-cu3-value"></div></li>
+                          <li><label>文字色3</label><div class="color-blk"><input type="color" id="like-cu3-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容4</label><div class="text-blk"><input type="text" id="like-cu4-value"></div></li>
+                          <li><label>文字色4</label><div class="color-blk"><input type="color" id="like-cu4-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容5</label><div class="text-blk"><input type="text" id="like-cu5-value"></div>
+                          </li>
+                          <li><label>文字色5</label><div class="color-blk"><input type="color" id="like-cu5-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■好きな曲</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="like-s1-value"></div></li>
+                          <li><label>文字色1</label><div class="color-blk"><input type="color" id="like-s1-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="like-s2-value"></div></li>
+                          <li><label>文字色2</label><div class="color-blk"><input type="color" id="like-s2-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容3</label><div class="text-blk"><input type="text" id="like-s3-value"></div></li>
+                          <li><label>文字色3</label><div class="color-blk"><input type="color" id="like-s3-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容4</label><div class="text-blk"><input type="text" id="like-s4-value"></div></li>
+                          <li><label>文字色4</label><div class="color-blk"><input type="color" id="like-s4-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容5</label><div class="text-blk"><input type="text" id="like-s5-value"></div></li>
+                          <li><label>文字色5</label><div class="color-blk"><input type="color" id="like-s5-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■好きなイベント</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="like-event-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="like-event-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■好きなエピソード</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="like-ep-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="like-ep-value-color"></div></li>
+                        </ul>
+                      </dd>
+                      <dt>■コメント</dt>
+                      <dd>
+                        <ul>
+                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="comment1-value"></div></li>
+                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="comment2-value"></div></li>
+                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="comment3-value"></div></li>
+                          <li><label>文字色</label><div class="color-blk"><input type="color" id="comment-value-color"></div></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                  </section>
+                </div>
+                <section class="sec-4">
+                  <div class="btn-box">
+                    <button type="button" id="btn-create-canvas" onclick="drawCanvas()">画像を作成する</button>
+                  </div>
+                </section>
+              </div>
+              <div class="flex-box flex-2">
+                <section class="sec-img">
+                  <div class="box-img">
+                    <canvas id="canvas"></canvas>
+                    <img id="canvas-img">
+                  </div>
+                </section>
+              </div>
+            </div>
+        </main>
+        <footer>
+          <div class="copy_box">
+            <p class="credit">
+              <small>© 2022 kXy37-Yuki</small>
+            </p>
+          </div>
+        </footer>
+      </div>
+    </body>
+    <script src="make.js"></script>
+  </html>
