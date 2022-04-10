@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://kxy37-yuki.github.io/profile-maker/sitemap.xml
