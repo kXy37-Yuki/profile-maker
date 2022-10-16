@@ -7,7 +7,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(170deg, rgba(0,187,240,1) 25%, rgba(255,255,255,1) 75%);
   /* font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; */
-  font-family: 'Yu Gothic', YuGothic, Meiryo, sans-serif";
+  font-family: 'Yu Gothic UI', 'Meiryo UI', 'Yu Gothic', YuGothic, Meiryo, sans-serif;
 }
 
 button, input[type="color"], input[type="file"] {
@@ -284,8 +284,8 @@ small {
     /* height: -webkit-calc(100vh - 200px);
     height: calc(100vh - 200px); */
 
-    height: -webkit-calc(100vh - 155px);
-    height: calc(100vh - 155px);
+    height: -webkit-calc(100vh - 155px - 45px);
+    height: calc(100vh - 155px - 45px);
   }
   .wrap::-webkit-scrollbar {
    display: none;
