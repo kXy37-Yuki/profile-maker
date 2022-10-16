@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-      <title>ナナシス履歴書メーカー - 履歴書作成</title>
+      <title>ナナシスプロフ画像メーカー - 履歴書画像作成</title>
       <link href="style.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -11,7 +11,7 @@
       <div class="all-box">
         <header>
           <div class="head-container">
-            <h1><a href="./index.html">ナナシス履歴書メーカー</a></h1>
+            <h1><a href="./index.html">ナナシスプロフ画像メーカー</a></h1>
           </div>
         </header>
         <main>
@@ -21,7 +21,7 @@
                   <section class="sec-1">
                     <label for="" class="sec-name" id="sec-name-1">1. 背景設定</label>
                     <dl id="content-1">
-                      <dt>■背景画像</dt>
+                      <dt>■背景</dt>
                       <dd>
                         <ul>
                           <li>
@@ -33,7 +33,7 @@
                           <img id="bg-img">
                         </div>
                       </dd>
-                      <dt>■背景色</dt>
+                      <dt>■フィルター</dt>
                       <dd>
                         <ul>
                           <li><label>色</label>
@@ -44,9 +44,9 @@
                           <li>
                             <label>透過度</label>
                             <div class="range-blk">
-                              <input type="range" id="filter-alpha" value="100" step="1" max="100" min="0">
+                              <input type="range" id="filter-alpha" value="90" step="1" max="100" min="0">
                             </div>
-                            <span id="range_value_1" class="par">100%</span>
+                            <span id="range_value_1" class="par">90%</span>
                           </li>
                         </ul>
                       </dd>
@@ -76,9 +76,9 @@
                           <li>
                             <label>透過度</label>
                             <div class="range-blk">
-                              <input type="range" id="card-bg-alpha" value="40" step="1" max="100" min="0">
+                              <input type="range" id="card-bg-alpha" value="60" step="1" max="100" min="0">
                             </div>
-                            <span id="range_value_3" class="par">40%</span>
+                            <span id="range_value_3" class="par">60%</span>
                         </ul>
                       </dd>
                     </dl>
@@ -143,71 +143,104 @@
                       <dt>■好きなキャラ・ユニット</dt>
                       <dd>
                         <ul>
-                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="like-cu1-value"></div></li>
-                          <li><label>文字色1</label><div class="color-blk"><input type="color" id="like-cu1-value-color"></div></li>
+                          <li><label>入力内容1行目</label><div class="text-blk"><input type="text" id="like-cu1-value"></div></li>
+                          <li><label>文字色1行目</label><div class="color-blk"><input type="color" id="like-cu1-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="like-cu2-value"></div>
+                          <li><label>入力内容2行目</label><div class="text-blk"><input type="text" id="like-cu2-value"></div>
                           </li>
-                          <li><label>文字色2</label><div class="color-blk"><input type="color" id="like-cu2-value-color"></div></li>
+                          <li><label>文字色2行目</label><div class="color-blk"><input type="color" id="like-cu2-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容3</label><div class="text-blk"><input type="text" id="like-cu3-value"></div></li>
-                          <li><label>文字色3</label><div class="color-blk"><input type="color" id="like-cu3-value-color"></div></li>
+                          <li><label>入力内容3行目</label><div class="text-blk"><input type="text" id="like-cu3-value"></div></li>
+                          <li><label>文字色3行目</label><div class="color-blk"><input type="color" id="like-cu3-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容4</label><div class="text-blk"><input type="text" id="like-cu4-value"></div></li>
-                          <li><label>文字色4</label><div class="color-blk"><input type="color" id="like-cu4-value-color"></div></li>
+                          <li><label>入力内容4行目</label><div class="text-blk"><input type="text" id="like-cu4-value"></div></li>
+                          <li><label>文字色4行目</label><div class="color-blk"><input type="color" id="like-cu4-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容5</label><div class="text-blk"><input type="text" id="like-cu5-value"></div>
+                          <li><label>入力内容5行目</label><div class="text-blk"><input type="text" id="like-cu5-value"></div>
                           </li>
-                          <li><label>文字色5</label><div class="color-blk"><input type="color" id="like-cu5-value-color"></div></li>
+                          <li><label>文字色5行目</label><div class="color-blk"><input type="color" id="like-cu5-value-color"></div></li>
                         </ul>
                       </dd>
                       <dt>■好きな曲</dt>
                       <dd>
                         <ul>
-                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="like-s1-value"></div></li>
-                          <li><label>文字色1</label><div class="color-blk"><input type="color" id="like-s1-value-color"></div></li>
+                          <li><label>入力内容1行目</label><div class="text-blk"><input type="text" id="like-s1-value"></div></li>
+                          <li><label>文字色1行目</label><div class="color-blk"><input type="color" id="like-s1-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="like-s2-value"></div></li>
-                          <li><label>文字色2</label><div class="color-blk"><input type="color" id="like-s2-value-color"></div></li>
+                          <li><label>入力内容2行目</label><div class="text-blk"><input type="text" id="like-s2-value"></div></li>
+                          <li><label>文字色2行目</label><div class="color-blk"><input type="color" id="like-s2-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容3</label><div class="text-blk"><input type="text" id="like-s3-value"></div></li>
-                          <li><label>文字色3</label><div class="color-blk"><input type="color" id="like-s3-value-color"></div></li>
+                          <li><label>入力内容3行目</label><div class="text-blk"><input type="text" id="like-s3-value"></div></li>
+                          <li><label>文字色3行目</label><div class="color-blk"><input type="color" id="like-s3-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容4</label><div class="text-blk"><input type="text" id="like-s4-value"></div></li>
-                          <li><label>文字色4</label><div class="color-blk"><input type="color" id="like-s4-value-color"></div></li>
+                          <li><label>入力内容4行目</label><div class="text-blk"><input type="text" id="like-s4-value"></div></li>
+                          <li><label>文字色4行目</label><div class="color-blk"><input type="color" id="like-s4-value-color"></div></li>
                         </ul>
                         <ul>
-                          <li><label>入力内容5</label><div class="text-blk"><input type="text" id="like-s5-value"></div></li>
-                          <li><label>文字色5</label><div class="color-blk"><input type="color" id="like-s5-value-color"></div></li>
+                          <li><label>入力内容5行目</label><div class="text-blk"><input type="text" id="like-s5-value"></div></li>
+                          <li><label>文字色5行目</label><div class="color-blk"><input type="color" id="like-s5-value-color"></div></li>
                         </ul>
                       </dd>
                       <dt>■好きなイベント</dt>
                       <dd>
                         <ul>
-                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="like-event-value"></div></li>
-                          <li><label>文字色</label><div class="color-blk"><input type="color" id="like-event-value-color"></div></li>
+                          <li><label>入力内容1行目</label><div class="text-blk"><input type="text" id="like-event1-value"></div></li>
+                          <li><label>文字色1行目</label><div class="color-blk"><input type="color" id="like-event1-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容2行目</label><div class="text-blk"><input type="text" id="like-event2-value"></div></li>
+                          <li><label>文字色2行目</label><div class="color-blk"><input type="color" id="like-event2-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容3行目</label><div class="text-blk"><input type="text" id="like-event3-value"></div></li>
+                          <li><label>文字色3行目</label><div class="color-blk"><input type="color" id="like-event3-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容4行目</label><div class="text-blk"><input type="text" id="like-event4-value"></div></li>
+                          <li><label>文字色4行目</label><div class="color-blk"><input type="color" id="like-event4-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容5行目</label><div class="text-blk"><input type="text" id="like-event5-value"></div></li>
+                          <li><label>文字色5行目</label><div class="color-blk"><input type="color" id="like-event5-value-color"></div></li>
                         </ul>
                       </dd>
                       <dt>■好きなエピソード</dt>
                       <dd>
                         <ul>
-                          <li><label>入力内容</label><div class="text-blk"><input type="text" id="like-ep-value"></div></li>
-                          <li><label>文字色</label><div class="color-blk"><input type="color" id="like-ep-value-color"></div></li>
+                          <li><label>入力内容1行目</label><div class="text-blk"><input type="text" id="like-ep1-value"></div></li>
+                          <li><label>文字色1行目</label><div class="color-blk"><input type="color" id="like-ep1-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容2行目</label><div class="text-blk"><input type="text" id="like-ep2-value"></div></li>
+                          <li><label>文字色2行目</label><div class="color-blk"><input type="color" id="like-ep2-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容3行目</label><div class="text-blk"><input type="text" id="like-ep3-value"></div></li>
+                          <li><label>文字色3行目</label><div class="color-blk"><input type="color" id="like-ep3-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容4行目</label><div class="text-blk"><input type="text" id="like-ep4-value"></div></li>
+                          <li><label>文字色4行目</label><div class="color-blk"><input type="color" id="like-ep4-value-color"></div></li>
+                        </ul>
+                        <ul>
+                          <li><label>入力内容5行目</label><div class="text-blk"><input type="text" id="like-ep5-value"></div></li>
+                          <li><label>文字色5行目</label><div class="color-blk"><input type="color" id="like-ep5-value-color"></div></li>
                         </ul>
                       </dd>
                       <dt>■コメント</dt>
                       <dd>
                         <ul>
-                          <li><label>入力内容1</label><div class="text-blk"><input type="text" id="comment1-value"></div></li>
-                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="comment2-value"></div></li>
-                          <li><label>入力内容2</label><div class="text-blk"><input type="text" id="comment3-value"></div></li>
+                          <li><label>入力内容1行目</label><div class="text-blk"><input type="text" id="comment1-value"></div></li>
+                          <li><label>入力内容2行目</label><div class="text-blk"><input type="text" id="comment2-value"></div></li>
+                          <li><label>入力内容3行目</label><div class="text-blk"><input type="text" id="comment3-value"></div></li>
+                          <li><label>入力内容4行目</label><div class="text-blk"><input type="text" id="comment4-value"></div></li>
                           <li><label>文字色</label><div class="color-blk"><input type="color" id="comment-value-color"></div></li>
                         </ul>
                       </dd>

@@ -6,7 +6,8 @@
 body {
   min-height: 100vh;
   background: linear-gradient(170deg, rgba(0,187,240,1) 25%, rgba(255,255,255,1) 75%);
-  font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif;
+  /* font-family: 'Yu Gothic UI', 'Meiryo UI', sans-serif; */
+  font-family: 'Yu Gothic', YuGothic, Meiryo, sans-serif";
 }
 
 button, input[type="color"], input[type="file"] {
@@ -45,6 +46,7 @@ header a {
 }
 
 .flex-container {
+
   display: flex;
   flex-direction: column;
 }
@@ -68,7 +70,7 @@ section:not(.sec-4) {
   position: relative;
   width: 80%;
   padding-top: 120%;
-  margin: 10px auto;
+  margin: auto;
 }
 
 section > label {
@@ -109,14 +111,14 @@ li {
 }
 
 li label {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
-  width: 30%;
+  width: 32%;
   font-size: 16px;
 }
 
 li span {
-  display: block;
+  /* display: block; */
   vertical-align: middle;
 }
 
@@ -126,7 +128,7 @@ li span {
 }
 
 .color-blk {
-  width: 50%;
+  width: 65%;
 }
 
 .text-blk {
@@ -156,17 +158,19 @@ input {
   font-size: 16px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="range"] {
-  width: 100%;
-}
+
 
 input[type="text"],
 input[type="number"] {
   width: 85%;
   padding: 0 0 0 5px;
   height: 31px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="range"] {
+  width: 100%;
 }
 
 input[type="color"] {
@@ -218,7 +222,8 @@ canvas {
   width: 100%;
   height: 100%;
   background-color: #BDBDBDBB;
-  border: 2px solid #00204a;
+  
+  /* max-height: calc(100vh - 125px); */
 }
 
 .box-img img {
@@ -227,8 +232,7 @@ canvas {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  border: 2px solid #00204a;
+  /* max-height: calc(100vh - 125px); */
 }
 
 .sec-name::after {
@@ -265,10 +269,10 @@ small {
 }
 
 
-@media (min-width: 1200px) {
-  main {
+@media (min-width: 1024px) {
+  /* main {
     height: calc(100vh - 105px);
-  }
+  } */
   .flex-container {
     flex-direction: row;
   }
@@ -277,15 +281,24 @@ small {
   }
   .wrap {
     overflow-y: scroll;
-    height: -webkit-calc(100vh - 200px);
-    height: calc(100vh - 200px);
+    /* height: -webkit-calc(100vh - 200px);
+    height: calc(100vh - 200px); */
+
+    height: -webkit-calc(100vh - 155px);
+    height: calc(100vh - 155px);
   }
   .wrap::-webkit-scrollbar {
    display: none;
   }
 }
 
-@media (max-width: 600px) {
+/* @media (min-width: 1500px) {
+  .wrap {
+    min-height: 900px;
+  }
+} */
+
+@media (max-width: 1024px) {
   .all-box {
     width: 100%;
   }
@@ -294,3 +307,5 @@ small {
     padding-top: 135%;
   }
 }
+
+

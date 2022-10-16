@@ -71,20 +71,53 @@ const likeSArr = [
   [likeS5Value, likeS5ValueColor]
 ];
 const TITLE_LIKE_EVENT = "好きなイベント";
-const likeEventValue = document.getElementById("like-event-value");
-const likeEventValueColor = document.getElementById("like-event-value-color");
+const likeEvent1Value = document.getElementById("like-event1-value");
+const likeEvent1ValueColor = document.getElementById("like-event1-value-color");
+const likeEvent2Value = document.getElementById("like-event2-value");
+const likeEvent2ValueColor = document.getElementById("like-event2-value-color");
+const likeEvent3Value = document.getElementById("like-event3-value");
+const likeEvent3ValueColor = document.getElementById("like-event3-value-color");
+const likeEvent4Value = document.getElementById("like-event4-value");
+const likeEvent4ValueColor = document.getElementById("like-event4-value-color");
+const likeEvent5Value = document.getElementById("like-event5-value");
+const likeEvent5ValueColor = document.getElementById("like-event5-value-color");
+const likeEventArr = [
+  [likeEvent1Value, likeEvent1ValueColor],
+  [likeEvent2Value, likeEvent2ValueColor],
+  [likeEvent3Value, likeEvent3ValueColor],
+  [likeEvent4Value, likeEvent4ValueColor],
+  [likeEvent5Value, likeEvent5ValueColor]
+];
 const TITLE_LIKE_EP = "好きなエピソード";
-const likeEpValue = document.getElementById("like-ep-value");
-const likeEpValueColor = document.getElementById("like-ep-value-color");
+const likeEp1Value = document.getElementById("like-ep1-value");
+const likeEp1ValueColor = document.getElementById("like-ep1-value-color");
+const likeEp2Value = document.getElementById("like-ep2-value");
+const likeEp2ValueColor = document.getElementById("like-ep2-value-color");
+const likeEp3Value = document.getElementById("like-ep3-value");
+const likeEp3ValueColor = document.getElementById("like-ep3-value-color");
+const likeEp4Value = document.getElementById("like-ep4-value");
+const likeEp4ValueColor = document.getElementById("like-ep4-value-color");
+const likeEp5Value = document.getElementById("like-ep5-value");
+const likeEp5ValueColor = document.getElementById("like-ep5-value-color");
+const likeEpArr = [
+  [likeEp1Value, likeEp1ValueColor],
+  [likeEp2Value, likeEp2ValueColor],
+  [likeEp3Value, likeEp3ValueColor],
+  [likeEp4Value, likeEp4ValueColor],
+  [likeEp5Value, likeEp5ValueColor]
+];
+
 const TITLE_COMMENT = "コメント";
 const comment1Value = document.getElementById("comment1-value");
 const comment2Value = document.getElementById("comment2-value");
 const comment3Value = document.getElementById("comment3-value");
+const comment4Value = document.getElementById("comment4-value");
 const commentValueColor = document.getElementById("comment-value-color");
 const commentArr = [
   [comment1Value, commentValueColor],
   [comment2Value, commentValueColor],
-  [comment3Value, commentValueColor]
+  [comment3Value, commentValueColor],
+  [comment4Value, commentValueColor]
 ];
 
 const canvas = document.getElementById("canvas");
@@ -107,7 +140,8 @@ canvas.height = cih;
 window.addEventListener("load", function() {
   ctx.textBaseline = "middle";
   ctx.lineWidth = CARD_LINE_WIDTH;
-  ctx.font = "bold 70px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+//  ctx.font = "bold 70px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+  ctx.font = "bold 70px 'Yu Gothic', YuGothic, Meiryo, sans-serif";
   // 初期描画
   ctx.fillStyle = "#ffffff";
   const firstText = "ここに画像が表示されます";
@@ -190,9 +224,9 @@ function drawContents() {
   drawTitle();
 
   drawCard(30, 160, 450, 80);
-  drawText(30, 160, 450, 80, TITLE_NAME, [[nameValue, nameValueColor]], 48);
+  drawText(30, 160, 450, 80, TITLE_NAME, [[nameValue, nameValueColor]], 46);
   drawCard(510, 160, 200, 80);
-  drawText(510, 160, 200, 80, TITLE_ID, [[idValue, idValueColor]], 40);
+  drawText(510, 160, 200, 80, TITLE_ID, [[idValue, idValueColor]], 38);
 
   drawCard(30, 310, 280, 70);
   drawText(30, 310, 280, 70, TITLE_LV, [[lvValue, lvValueColor]], 45);
@@ -202,26 +236,29 @@ function drawContents() {
   drawText(650, 310, 280, 70, TITLE_RATE, [[rateValue, rateValueColor]], 45);
 
   drawCard(30, 450, 900, 70);
-  drawText(30, 450, 900, 70, TITLE_KNOW, [[knowValue, knowValueColor]], 38);
+  drawText(30, 450, 900, 70, TITLE_KNOW, [[knowValue, knowValueColor]], 36);
 
-  drawCard(30, 590, 435, 250);
-  drawText(30, 590, 435, 250, TITLE_LIKE_CU, likeCUArr, 32);
-  drawCard(495, 590, 435, 250);
-  drawText(495, 590, 435, 250, TITLE_LIKE_S, likeSArr, 32);
+  drawCard(30, 590, 435, 230);
+  drawText(30, 590, 435, 230, TITLE_LIKE_CU, likeCUArr, 30);
+  drawCard(495, 590, 435, 230);
+  drawText(495, 590, 435, 230, TITLE_LIKE_S, likeSArr, 30);
 
-  drawCard(30, 910, 900, 70);
-  drawText(30, 910, 900, 70, TITLE_LIKE_EVENT, [[likeEventValue, likeEventValueColor]], 38);
-  drawCard(30, 1050, 900, 70);
-  drawText(30, 1050, 900, 70, TITLE_LIKE_EP, [[likeEpValue, likeEpValueColor]], 38);
+  drawCard(30, 890, 435, 230);
+  drawText(30, 890, 435, 230, TITLE_LIKE_EVENT, likeEventArr, 30);
+  drawCard(495, 890, 435, 230);
+  drawText(495, 890, 435, 230, TITLE_LIKE_EP, likeEpArr, 30);
+
+  // drawCard(30, 910, 900, 70);
+  // drawText(30, 910, 900, 70, TITLE_LIKE_EVENT, [[likeEventValue, likeEventValueColor]], 38);
+  // drawCard(30, 1050, 900, 70);
+  // drawText(30, 1050, 900, 70, TITLE_LIKE_EP, [[likeEpValue, likeEpValueColor]], 38);
 
   drawCard(30, 1190, 900, 170);
-  drawText(30, 1190, 900, 170, TITLE_COMMENT, commentArr, 36);
+  drawText(30, 1190, 900, 170, TITLE_COMMENT, commentArr, 28); // 36
 
   drawDate();
 
-  if (iconImg.src != "") {
-    drawIcon(736, 46, 200, 200);
-  }
+  drawIcon(736, 46, 200, 200);
 
   canvas.style.backgroundColor = "#ffffff00";
   canvasImg.src = canvas.toDataURL();
@@ -261,7 +298,7 @@ function drawTitle() {
   // タイトル枠
   ctx.fillStyle = "" + cardColor.value;
   ctx.globalAlpha = 1 - cardAlpha.value / 100;
-  ctx.font = "bold 50px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+  ctx.font = "bold 50px " + fontType;
   ctx.beginPath();
   ctx.moveTo(0, 20);
   ctx.lineTo(440, 20);
@@ -272,7 +309,7 @@ function drawTitle() {
   // タイトル文字
   ctx.fillStyle = "" + cardValueColor.value;
   ctx.globalAlpha = 1;
-  ctx.font = "bold 45px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+  ctx.font = "bold 45px " + fontType;
   ctx.fillText("ナナシス履歴書", 30, 56);
   // 下線
   ctx.lineWidth = CARD_LINE_WIDTH - 2;
@@ -297,7 +334,9 @@ function drawIcon(wp, hp, w, h) {
   ctx.closePath();
   ctx.fill();
   ctx.globalAlpha = 1;
-  ctx.drawImage(iconImg, wp + 8, hp + 8, w - 16, h - 16);
+  if (iconImg.src != "") {
+    ctx.drawImage(iconImg, wp + 8, hp + 8, w - 16, h - 16);
+  }
 }
 
 function drawCard(wp, hp, w, h) {
@@ -330,16 +369,20 @@ function drawCard(wp, hp, w, h) {
 function drawText(wp, hp, width, height, titleText, contentsValueArr, contentsFontSize) {
   // カードタイトル描画
   ctx.fillStyle = "" + cardValueColor.value;
-  ctx.font = "bold 25px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+  ctx.font = "bold 25px " + fontType;
   ctx.fillText(titleText, wp + 10, hp - 18, width - 50);
   // カード入力内容描画
   for (let i = 0; i < contentsValueArr.length; i++) {
     ctx.fillStyle = "" + contentsValueArr[i][1].value;
-    ctx.font = "bold " + contentsFontSize + "px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+    ctx.font = "bold " + contentsFontSize + "px " + fontType;
     if (contentsValueArr.length == 1) {
       ctx.fillText(contentsValueArr[i][0].value, wp + 10, hp + height / 2, width - 20);
     } else {
-      ctx.fillText(contentsValueArr[i][0].value, wp + 10, hp + contentsFontSize / 2 + i * contentsFontSize + (i + 1) * 14, width - 20);
+      if (contentsFontSize < 30) {
+        ctx.fillText(contentsValueArr[i][0].value, wp + 10, hp + contentsFontSize / 2 + i * contentsFontSize + (i + 1) * 12, width - 20);
+      } else {
+        ctx.fillText(contentsValueArr[i][0].value, wp + 10, hp + contentsFontSize / 2 + i * contentsFontSize + (i + 1) * 14, width - 20);
+      }
     }
   }
 }
@@ -350,6 +393,9 @@ function drawDate() {
   var m = date.getMonth() + 1;
   var d = date.getDate();
   ctx.fillStyle = "" + cardValueColor.value;
-  ctx.font = "bold 22px 'Yu Gothic UI', 'Meiryo UI', sans-serif";
+  ctx.font = "bold 22px " + fontType;
   ctx.fillText("作成日：" + y + "/" + m + "/" + d, 30, cih - 28);
 }
+
+const fontType = "'Yu Gothic UI', 'Meiryo UI', 'Yu Gothic', YuGothic, Meiryo, sans-serif";
+
